@@ -32,7 +32,7 @@ public:
     }
 
     void removeNode(Node<T>* node){
-        if (!node) return;
+        if (!node) return ;
 
         // Cập nhật con trỏ phía trước
         if (node->prev) {
