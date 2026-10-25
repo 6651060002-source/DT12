@@ -21,7 +21,7 @@ int main() {
     int choice;
     do {
         cout << "\n=================================\n";
-        cout << "====CHUONG TRINH QUAN LY DANH BA====\n";
+        cout << "====CHUONG TRINH QUAN LY DANH BA===\n";
         cout << "===================================\n";
         cout << "1. Them lien he moi\n";
         cout << "2. Hien thi danh ba (A - Z)\n";
