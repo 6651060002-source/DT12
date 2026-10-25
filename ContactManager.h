@@ -43,7 +43,7 @@ public:
             std::cout << "Danh ba rong!\n";
             return;
         }
-        std::cout << "\n=== DANH SACH LIEN HE (Z-A) ===\n";
+        std::cout << "\n==== DANH SACH LIEN HE (Z-A) ====\n";
         while (curr) {
             std::cout << "Ten: " << curr->data.name 
                       << " | SDT: " << curr->data.phone 
@@ -65,6 +65,6 @@ public:
         std::cout << "-> Khong tim thay SDT: " << phone << std::endl;
         return false;
     }
-}:
+};
 
 #endif
