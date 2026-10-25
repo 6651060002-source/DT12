@@ -27,7 +27,7 @@ public:
             std::cout << "Danh ba rong!\n";
             return;
         }
-        std::cout << "\n====== DANH SACH LIEN HE (A-Z) ======\n";
+        std::cout << "\n=== DANH SACH LIEN HE (A-Z) ===\n";
         while (curr) {
             std::cout << "Ten: " << curr->data.name 
                       << " | SDT: " << curr->data.phone 
