@@ -115,5 +115,8 @@ int main() {
         }
     } while (choice != 0);
 
+int main() {
+    testSystem();
+    system("pause");
     return 0;
 }
