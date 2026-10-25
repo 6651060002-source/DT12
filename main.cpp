@@ -8,7 +8,7 @@
 
 using namespace std;
 
-// Hàm xóa bộ nhớ đệm để tránh hiện tượng trôi dòng khi nhập dữ liệu
+// Hàm xóa bộ nhớ đệm để tránh bị nhảy dòng khi nhập dữ liệu
 void clearInputBuffer() {
     cin.clear();
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -26,7 +26,7 @@ int main() {
         cout << "1. Them lien he moi\n";
         cout << "2. Hien thi danh ba (A - Z)\n";
         cout << "3. Hien thi danh ba (Z - A)\n";
-        cout << "4. Tim kiếm lien he theo tien to (Prefix)\n";
+        cout << "4. Tim kiem lien he theo tien to (Prefix)\n";
         cout << "5. Sap xep danh ba theo ten (A-Z)\n";
         cout << "6. Xoa lien he theo SDT\n";
         cout << "7. Ghi nhan cuoc goi moi\n";
@@ -42,7 +42,7 @@ int main() {
             continue;
         }
 
-        clearInputBuffer(); // Xóa bộ nhớ đệm sau khi nhập số choice
+        clearInputBuffer();
 
         switch (choice) {
             case 1: {
