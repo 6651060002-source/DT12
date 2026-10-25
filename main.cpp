@@ -44,5 +44,6 @@ void testSystem() {
 
 int main() {
     testSystem();
+    system("pause");
     return 0;
 }
