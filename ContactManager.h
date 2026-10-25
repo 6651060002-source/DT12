@@ -20,18 +20,35 @@ public:
         std::cout << "-> Da them lien he: " << name << std::endl;
     }
 
+    // Duyệt xuôi A-Z (Head -> Tail)
     void displayAll() {
         Node<Contact>* curr = contacts.head;
         if (!curr) {
             std::cout << "Danh ba rong!\n";
             return;
         }
-        std::cout << "\n=== DANH SACH LIEN HE ===\n";
+        std::cout << "\n=== DANH SACH LIEN HE (A-Z) ===\n";
         while (curr) {
             std::cout << "Ten: " << curr->data.name 
-                      << " | SĐT: " << curr->data.phone 
+                      << " | SDT: " << curr->data.phone 
                       << " | Email: " << curr->data.email << std::endl;
             curr = curr->next;
+        }
+    }
+
+    // Duyệt ngược Z-A (Tail -> Head)
+    void displayReverse() {
+        Node<Contact>* curr = contacts.tail;
+        if (!curr) {
+            std::cout << "Danh ba rong!\n";
+            return;
+        }
+        std::cout << "\n=== DANH SACH LIEN HE (Z-A) ===\n";
+        while (curr) {
+            std::cout << "Ten: " << curr->data.name 
+                      << " | SDT: " << curr->data.phone 
+                      << " | Email: " << curr->data.email << std::endl;
+            curr = curr->prev;
         }
     }
 
@@ -40,11 +57,12 @@ public:
         while (curr) {
             if (curr->data.phone == phone) {
                 contacts.removeNode(curr);
-                std::cout << "-> Da xoa lien he co SĐT: " << phone << std::endl;
+                std::cout << "-> Da xoa lien he co SDT: " << phone << std::endl;
                 return true;
             }
             curr = curr->next;
         }
+        std::cout << "-> Khong tim thay SDT: " << phone << std::endl;
         return false;
     }
 };
