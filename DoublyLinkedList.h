@@ -33,10 +33,21 @@ public:
 
     void removeNode(Node<T>* node) {
         if (!node) return;
-        if (node == head) head = head->next;
-        if (node == tail) tail = tail->prev;
-        if (node->prev) node->prev->next = node->next;
-        if (node->next) node->next->prev = node->prev;
+
+        // Cập nhật con trỏ phía trước
+        if (node->prev) {
+            node->prev->next = node->next;
+        } else {
+            head = node->next; // Nếu node bị xóa là head
+        }
+
+        // Cập nhật con trỏ phía sau
+        if (node->next) {
+            node->next->prev = node->prev;
+        } else {
+            tail = node->prev; // Nếu node bị xóa là tail
+        }
+
         delete node;
     }
 
