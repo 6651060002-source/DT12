@@ -58,7 +58,7 @@ public:
             delete current;
             current = next;
         }
-        head = tail = nullptr;
+        head = tail = nullptr ;
     }
 };
 
