@@ -31,7 +31,7 @@ public:
         }
     }
 
-    void removeNode(Node<T>* node){
+    void removeNode(Node<T>* node) {
         if (!node) return ;
 
         // Cập nhật con trỏ phía trước
